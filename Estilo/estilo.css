@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(at 0 0, #fff8ce, #ffb61d);
+    height: 100vh;
+    overflow: hidden; /* adiciona um scrol com barra de rolagem */
+}
+@keyframes movimenta{
+    from{
+        transform: translate(0, 0);
+    }
+    to{
+        transform: translate(20px, 20px);
+    }
+}
+.container{
+    width: 90%;
+    max-width: 1340px;
+    margin: auto;
+}
+.container header{
+    padding: 50px 0;
+}
+.principal{
+    display: flex;
+    gap: 40px; 
+}
+.principal .texto, .principal .animacao{
+    width: 50%;
+}
+.textos h1{
+    font-size: 66px;
+    margin: 55px 0;
+}
+.textos h1 strong{
+    text-transform: uppercase;
+    color: brown;
+}
+.textos p{
+    font-weight: 300;
+}
+.textos p:nth-child(3){
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.inputs input{
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #28293e;
+}
+.inputs input[ type=text]{
+    background:none;
+    outline: none;
+    margin-right: 10px;
+}
+.inputs input[ type=submit]{
+    background-color: #031d44;
+    color: white;
+}
+.animacao{
+    position: relative;
+}
+.animacao img{
+    position: absolute;
+}
+.animacao img:nth-child(1){
+    top: 120px;
+    left: -60px;
+    transform: rotate(-20deg);
+    animation: movimenta 2s ease-in-out infinite alternate;
+    /* border: 2px solid magenta; */
+    /* z-index: 1; */
+}
+.animacao img:nth-child(2){
+     /* border: 2px solid magenta; */
+     transform: rotate(15deg);
+     left: 350px;
+     animation: movimenta 2s ease-in-out infinite alternate;
+}
+.animacao img:nth-child(3){
+    /* border: 2px solid magenta; */
+  /*   animation: movimenta 2s ease-in-out infinite alternate; */
+}
+.animacao img:nth-child(4){
+    top: 370px;
+    left: 50px;
+    transform: rotate(-20deg);
+    animation: movimenta 2s ease-in-out infinite alternate-reverse;
+}
+.animacao img:nth-child(5){
+    top: -100px;
+    left: 100px;
+    transform: rotate(-20deg);
+    animation: movimenta 2s ease-in-out infinite alternate-reverse;
+}
+.animacao img:nth-child(6){
+    top: 250px;
+    left: 400px;
+    transform: rotate(15deg);
+    animation: movimenta 2s ease-in-out infinite alternate-reverse;
+}
